@@ -49,6 +49,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/car_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/car_core_hardware.xml
 
+# ROS 2 - VHAL implementation
+$(call inherit-product, vendor/spyrosoft/interfaces/automotive/vehicle/vehicle-hal.mk)
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := rpi4
 PRODUCT_NAME := aosp_rpi4_car
